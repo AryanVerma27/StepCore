@@ -1,0 +1,332 @@
+
+========================================
+   STARTING TEST 1: MINIMAL PROGRAM (15 - 1)
+========================================
+
+[Cycle at 25 ns] --------------------------
+  FETCH  : PC=0 | Inst=0x20031100
+  DECODE : Op=4'b0010 | Rn=R1 | Rm=R2 | Rd=R3
+  READ   : Reg[R1]=15 | Reg[R2]=1
+  EXEC   : ALU Result=14 | Zero=0
+  WRITE  : Storing ALU 14 into Register R3
+----------------------------------------------
+[SUCCESS] MINIMAL TEST PASSED! C (R3) = 14
+
+========================================
+   STARTING TEST 2: LOOPING PROGRAM
+========================================
+
+[Cycle at 95 ns] --------------------------
+  FETCH  : PC=0 | Inst=0x20011200
+  DECODE : Op=4'b0100 | Rn=R1 | Rm=R2 | Rd=R1
+  READ   : Reg[R1]=0 | Reg[R2]=1
+  EXEC   : ALU Result=1 | Zero=0
+  WRITE  : Storing ALU 1 into Register R1
+----------------------------------------------
+
+[Cycle at 105 ns] --------------------------
+  FETCH  : PC=4 | Inst=0x30022200
+  DECODE : Op=4'b0100 | Rn=R2 | Rm=R3 | Rd=R2
+  READ   : Reg[R2]=1 | Reg[R3]=1
+  EXEC   : ALU Result=2 | Zero=0
+  WRITE  : Storing ALU 2 into Register R2
+----------------------------------------------
+
+[Cycle at 115 ns] --------------------------
+  FETCH  : PC=8 | Inst=0x40002500
+  DECODE : Op=4'b1010 | Rn=R2 | Rm=R4 | Rd=R0
+  READ   : Reg[R2]=2 | Reg[R4]=11
+  EXEC   : ALU Result=4294967287 | Zero=0
+----------------------------------------------
+
+[Cycle at 125 ns] --------------------------
+  FETCH  : PC=12 | Inst=0x00000580
+  DECODE : Op=4'b1011 | Rn=R0 | Rm=R0 | Rd=R0
+  READ   : Reg[R0]=0 | Reg[R0]=0
+  EXEC   : ALU Result=0 | Zero=1
+  BRANCH : Jumping to Address 0
+----------------------------------------------
+
+[Cycle at 135 ns] --------------------------
+  FETCH  : PC=0 | Inst=0x20011200
+  DECODE : Op=4'b0100 | Rn=R1 | Rm=R2 | Rd=R1
+  READ   : Reg[R1]=1 | Reg[R2]=2
+  EXEC   : ALU Result=3 | Zero=0
+  WRITE  : Storing ALU 3 into Register R1
+----------------------------------------------
+
+[Cycle at 145 ns] --------------------------
+  FETCH  : PC=4 | Inst=0x30022200
+  DECODE : Op=4'b0100 | Rn=R2 | Rm=R3 | Rd=R2
+  READ   : Reg[R2]=2 | Reg[R3]=1
+  EXEC   : ALU Result=3 | Zero=0
+  WRITE  : Storing ALU 3 into Register R2
+----------------------------------------------
+
+[Cycle at 155 ns] --------------------------
+  FETCH  : PC=8 | Inst=0x40002500
+  DECODE : Op=4'b1010 | Rn=R2 | Rm=R4 | Rd=R0
+  READ   : Reg[R2]=3 | Reg[R4]=11
+  EXEC   : ALU Result=4294967288 | Zero=0
+----------------------------------------------
+
+[Cycle at 165 ns] --------------------------
+  FETCH  : PC=12 | Inst=0x00000580
+  DECODE : Op=4'b1011 | Rn=R0 | Rm=R0 | Rd=R0
+  READ   : Reg[R0]=0 | Reg[R0]=0
+  EXEC   : ALU Result=0 | Zero=1
+  BRANCH : Jumping to Address 0
+----------------------------------------------
+
+[Cycle at 175 ns] --------------------------
+  FETCH  : PC=0 | Inst=0x20011200
+  DECODE : Op=4'b0100 | Rn=R1 | Rm=R2 | Rd=R1
+  READ   : Reg[R1]=3 | Reg[R2]=3
+  EXEC   : ALU Result=6 | Zero=0
+  WRITE  : Storing ALU 6 into Register R1
+----------------------------------------------
+
+[Cycle at 185 ns] --------------------------
+  FETCH  : PC=4 | Inst=0x30022200
+  DECODE : Op=4'b0100 | Rn=R2 | Rm=R3 | Rd=R2
+  READ   : Reg[R2]=3 | Reg[R3]=1
+  EXEC   : ALU Result=4 | Zero=0
+  WRITE  : Storing ALU 4 into Register R2
+----------------------------------------------
+
+[Cycle at 195 ns] --------------------------
+  FETCH  : PC=8 | Inst=0x40002500
+  DECODE : Op=4'b1010 | Rn=R2 | Rm=R4 | Rd=R0
+  READ   : Reg[R2]=4 | Reg[R4]=11
+  EXEC   : ALU Result=4294967289 | Zero=0
+----------------------------------------------
+
+[Cycle at 205 ns] --------------------------
+  FETCH  : PC=12 | Inst=0x00000580
+  DECODE : Op=4'b1011 | Rn=R0 | Rm=R0 | Rd=R0
+  READ   : Reg[R0]=0 | Reg[R0]=0
+  EXEC   : ALU Result=0 | Zero=1
+  BRANCH : Jumping to Address 0
+----------------------------------------------
+
+[Cycle at 215 ns] --------------------------
+  FETCH  : PC=0 | Inst=0x20011200
+  DECODE : Op=4'b0100 | Rn=R1 | Rm=R2 | Rd=R1
+  READ   : Reg[R1]=6 | Reg[R2]=4
+  EXEC   : ALU Result=10 | Zero=0
+  WRITE  : Storing ALU 10 into Register R1
+----------------------------------------------
+
+[Cycle at 225 ns] --------------------------
+  FETCH  : PC=4 | Inst=0x30022200
+  DECODE : Op=4'b0100 | Rn=R2 | Rm=R3 | Rd=R2
+  READ   : Reg[R2]=4 | Reg[R3]=1
+  EXEC   : ALU Result=5 | Zero=0
+  WRITE  : Storing ALU 5 into Register R2
+----------------------------------------------
+
+[Cycle at 235 ns] --------------------------
+  FETCH  : PC=8 | Inst=0x40002500
+  DECODE : Op=4'b1010 | Rn=R2 | Rm=R4 | Rd=R0
+  READ   : Reg[R2]=5 | Reg[R4]=11
+  EXEC   : ALU Result=4294967290 | Zero=0
+----------------------------------------------
+
+[Cycle at 245 ns] --------------------------
+  FETCH  : PC=12 | Inst=0x00000580
+  DECODE : Op=4'b1011 | Rn=R0 | Rm=R0 | Rd=R0
+  READ   : Reg[R0]=0 | Reg[R0]=0
+  EXEC   : ALU Result=0 | Zero=1
+  BRANCH : Jumping to Address 0
+----------------------------------------------
+
+[Cycle at 255 ns] --------------------------
+  FETCH  : PC=0 | Inst=0x20011200
+  DECODE : Op=4'b0100 | Rn=R1 | Rm=R2 | Rd=R1
+  READ   : Reg[R1]=10 | Reg[R2]=5
+  EXEC   : ALU Result=15 | Zero=0
+  WRITE  : Storing ALU 15 into Register R1
+----------------------------------------------
+
+[Cycle at 265 ns] --------------------------
+  FETCH  : PC=4 | Inst=0x30022200
+  DECODE : Op=4'b0100 | Rn=R2 | Rm=R3 | Rd=R2
+  READ   : Reg[R2]=5 | Reg[R3]=1
+  EXEC   : ALU Result=6 | Zero=0
+  WRITE  : Storing ALU 6 into Register R2
+----------------------------------------------
+
+[Cycle at 275 ns] --------------------------
+  FETCH  : PC=8 | Inst=0x40002500
+  DECODE : Op=4'b1010 | Rn=R2 | Rm=R4 | Rd=R0
+  READ   : Reg[R2]=6 | Reg[R4]=11
+  EXEC   : ALU Result=4294967291 | Zero=0
+----------------------------------------------
+
+[Cycle at 285 ns] --------------------------
+  FETCH  : PC=12 | Inst=0x00000580
+  DECODE : Op=4'b1011 | Rn=R0 | Rm=R0 | Rd=R0
+  READ   : Reg[R0]=0 | Reg[R0]=0
+  EXEC   : ALU Result=0 | Zero=1
+  BRANCH : Jumping to Address 0
+----------------------------------------------
+
+[Cycle at 295 ns] --------------------------
+  FETCH  : PC=0 | Inst=0x20011200
+  DECODE : Op=4'b0100 | Rn=R1 | Rm=R2 | Rd=R1
+  READ   : Reg[R1]=15 | Reg[R2]=6
+  EXEC   : ALU Result=21 | Zero=0
+  WRITE  : Storing ALU 21 into Register R1
+----------------------------------------------
+
+[Cycle at 305 ns] --------------------------
+  FETCH  : PC=4 | Inst=0x30022200
+  DECODE : Op=4'b0100 | Rn=R2 | Rm=R3 | Rd=R2
+  READ   : Reg[R2]=6 | Reg[R3]=1
+  EXEC   : ALU Result=7 | Zero=0
+  WRITE  : Storing ALU 7 into Register R2
+----------------------------------------------
+
+[Cycle at 315 ns] --------------------------
+  FETCH  : PC=8 | Inst=0x40002500
+  DECODE : Op=4'b1010 | Rn=R2 | Rm=R4 | Rd=R0
+  READ   : Reg[R2]=7 | Reg[R4]=11
+  EXEC   : ALU Result=4294967292 | Zero=0
+----------------------------------------------
+
+[Cycle at 325 ns] --------------------------
+  FETCH  : PC=12 | Inst=0x00000580
+  DECODE : Op=4'b1011 | Rn=R0 | Rm=R0 | Rd=R0
+  READ   : Reg[R0]=0 | Reg[R0]=0
+  EXEC   : ALU Result=0 | Zero=1
+  BRANCH : Jumping to Address 0
+----------------------------------------------
+
+[Cycle at 335 ns] --------------------------
+  FETCH  : PC=0 | Inst=0x20011200
+  DECODE : Op=4'b0100 | Rn=R1 | Rm=R2 | Rd=R1
+  READ   : Reg[R1]=21 | Reg[R2]=7
+  EXEC   : ALU Result=28 | Zero=0
+  WRITE  : Storing ALU 28 into Register R1
+----------------------------------------------
+
+[Cycle at 345 ns] --------------------------
+  FETCH  : PC=4 | Inst=0x30022200
+  DECODE : Op=4'b0100 | Rn=R2 | Rm=R3 | Rd=R2
+  READ   : Reg[R2]=7 | Reg[R3]=1
+  EXEC   : ALU Result=8 | Zero=0
+  WRITE  : Storing ALU 8 into Register R2
+----------------------------------------------
+
+[Cycle at 355 ns] --------------------------
+  FETCH  : PC=8 | Inst=0x40002500
+  DECODE : Op=4'b1010 | Rn=R2 | Rm=R4 | Rd=R0
+  READ   : Reg[R2]=8 | Reg[R4]=11
+  EXEC   : ALU Result=4294967293 | Zero=0
+----------------------------------------------
+
+[Cycle at 365 ns] --------------------------
+  FETCH  : PC=12 | Inst=0x00000580
+  DECODE : Op=4'b1011 | Rn=R0 | Rm=R0 | Rd=R0
+  READ   : Reg[R0]=0 | Reg[R0]=0
+  EXEC   : ALU Result=0 | Zero=1
+  BRANCH : Jumping to Address 0
+----------------------------------------------
+
+[Cycle at 375 ns] --------------------------
+  FETCH  : PC=0 | Inst=0x20011200
+  DECODE : Op=4'b0100 | Rn=R1 | Rm=R2 | Rd=R1
+  READ   : Reg[R1]=28 | Reg[R2]=8
+  EXEC   : ALU Result=36 | Zero=0
+  WRITE  : Storing ALU 36 into Register R1
+----------------------------------------------
+
+[Cycle at 385 ns] --------------------------
+  FETCH  : PC=4 | Inst=0x30022200
+  DECODE : Op=4'b0100 | Rn=R2 | Rm=R3 | Rd=R2
+  READ   : Reg[R2]=8 | Reg[R3]=1
+  EXEC   : ALU Result=9 | Zero=0
+  WRITE  : Storing ALU 9 into Register R2
+----------------------------------------------
+
+[Cycle at 395 ns] --------------------------
+  FETCH  : PC=8 | Inst=0x40002500
+  DECODE : Op=4'b1010 | Rn=R2 | Rm=R4 | Rd=R0
+  READ   : Reg[R2]=9 | Reg[R4]=11
+  EXEC   : ALU Result=4294967294 | Zero=0
+----------------------------------------------
+
+[Cycle at 405 ns] --------------------------
+  FETCH  : PC=12 | Inst=0x00000580
+  DECODE : Op=4'b1011 | Rn=R0 | Rm=R0 | Rd=R0
+  READ   : Reg[R0]=0 | Reg[R0]=0
+  EXEC   : ALU Result=0 | Zero=1
+  BRANCH : Jumping to Address 0
+----------------------------------------------
+
+[Cycle at 415 ns] --------------------------
+  FETCH  : PC=0 | Inst=0x20011200
+  DECODE : Op=4'b0100 | Rn=R1 | Rm=R2 | Rd=R1
+  READ   : Reg[R1]=36 | Reg[R2]=9
+  EXEC   : ALU Result=45 | Zero=0
+  WRITE  : Storing ALU 45 into Register R1
+----------------------------------------------
+
+[Cycle at 425 ns] --------------------------
+  FETCH  : PC=4 | Inst=0x30022200
+  DECODE : Op=4'b0100 | Rn=R2 | Rm=R3 | Rd=R2
+  READ   : Reg[R2]=9 | Reg[R3]=1
+  EXEC   : ALU Result=10 | Zero=0
+  WRITE  : Storing ALU 10 into Register R2
+----------------------------------------------
+
+[Cycle at 435 ns] --------------------------
+  FETCH  : PC=8 | Inst=0x40002500
+  DECODE : Op=4'b1010 | Rn=R2 | Rm=R4 | Rd=R0
+  READ   : Reg[R2]=10 | Reg[R4]=11
+  EXEC   : ALU Result=4294967295 | Zero=0
+----------------------------------------------
+
+[Cycle at 445 ns] --------------------------
+  FETCH  : PC=12 | Inst=0x00000580
+  DECODE : Op=4'b1011 | Rn=R0 | Rm=R0 | Rd=R0
+  READ   : Reg[R0]=0 | Reg[R0]=0
+  EXEC   : ALU Result=0 | Zero=1
+  BRANCH : Jumping to Address 0
+----------------------------------------------
+
+[Cycle at 455 ns] --------------------------
+  FETCH  : PC=0 | Inst=0x20011200
+  DECODE : Op=4'b0100 | Rn=R1 | Rm=R2 | Rd=R1
+  READ   : Reg[R1]=45 | Reg[R2]=10
+  EXEC   : ALU Result=55 | Zero=0
+  WRITE  : Storing ALU 55 into Register R1
+----------------------------------------------
+
+[Cycle at 465 ns] --------------------------
+  FETCH  : PC=4 | Inst=0x30022200
+  DECODE : Op=4'b0100 | Rn=R2 | Rm=R3 | Rd=R2
+  READ   : Reg[R2]=10 | Reg[R3]=1
+  EXEC   : ALU Result=11 | Zero=0
+  WRITE  : Storing ALU 11 into Register R2
+----------------------------------------------
+
+[Cycle at 475 ns] --------------------------
+  FETCH  : PC=8 | Inst=0x40002500
+  DECODE : Op=4'b1010 | Rn=R2 | Rm=R4 | Rd=R0
+  READ   : Reg[R2]=11 | Reg[R4]=11
+  EXEC   : ALU Result=0 | Zero=1
+----------------------------------------------
+
+[Cycle at 485 ns] --------------------------
+  FETCH  : PC=12 | Inst=0x00000580
+  DECODE : Op=4'b1011 | Rn=R0 | Rm=R0 | Rd=R0
+  READ   : Reg[R0]=0 | Reg[R0]=0
+  EXEC   : ALU Result=0 | Zero=1
+----------------------------------------------
+[SUCCESS] LOOP TEST PASSED! C (R1) = 55
+
+========================================
+   ALL TESTS COMPLETED SUCCESSFULLY!  
+========================================
+

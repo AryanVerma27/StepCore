@@ -1,0 +1,17 @@
+.DS_Store
+# Synopsys VCS / DVE / Verdi build and run artifacts
+simv
+simv.daidir/
+csrc/
+AN.DB/
+DVEfiles/
+verdiLog/
+ucli.key
+vc_hdrs.h
+*.vpd
+*.vcd
+*.fsdb
+*.log
+# Icarus
+*.vvp
+a.out
